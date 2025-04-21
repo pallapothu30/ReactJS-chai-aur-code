@@ -4,16 +4,21 @@ import './App.css'
 
 function App() {
   const [counter,setCounter] = useState(0)
-  // let counter =5;
+
+
   const addValue = () =>{
-    // counter = counter+1;
-    setCounter(counter+1);
-    console.log("clicked",counter);
+    let newCntr = counter+1;
+    if(newCntr>20)newCntr = 0;
+    setCounter(newCntr);
+    console.log("clicked",newCntr);
   }
+
+
   const subValue = () =>{
-    // counter = counter - 1;
-    setCounter(counter-1);
-    console.log("clicked",counter);
+    let newCntr = counter - 1;
+    if(newCntr<0)newCntr = 0;
+    setCounter(newCntr);
+    console.log("clicked",newCntr);
     
   }
   return (
