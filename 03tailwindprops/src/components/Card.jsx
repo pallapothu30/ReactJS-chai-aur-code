@@ -1,21 +1,19 @@
 import React from "react";
 
-function Card() {
+function Card({ name, description, image, profileLink }) {
   return (
-    <div className="relative w-72 h-96 rounded-xl overflow-hidden shadow-lg">
+    <div className="relative w-72 h-96 rounded-xl overflow-hidden shadow-lg m-4">
       <img
-        src="https://media.gettyimages.com/id/2175731619/fr/photo/san-francisco-california-stephen-curry-of-the-golden-state-warriors-poses-for-the-media.jpg?s=612x612&w=0&k=20&c=-OJwE709ujy2eb54uc4gBFjITMJnflA4mA2YZf60l1Q="
-        alt="Profile"
+        src={image}
+        alt={name}
         className="w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
       <div className="absolute bottom-4 left-4 text-white">
-        <h2 className="text-xl font-bold">Stephen Curry</h2>
-        <p className="text-sm text-gray-300 mt-1 w-[90%]">
-          NBA Player | Point Guard | Greatest Shooter
-        </p>
+        <h2 className="text-xl font-bold">{name}</h2>
+        <p className="text-sm text-gray-300 mt-1 w-[90%]">{description}</p>
         <a
-          href="https://x.com/StephenCurry30"
+          href={profileLink}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block mt-3 text-sm font-semibold hover:underline"
