@@ -13,3 +13,6 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 ![Project Result img](image.png)
+
+react interview question soln
+<video controls src="20250423-1455-53.2645147.mp4" title="Title"></video>

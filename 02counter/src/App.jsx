@@ -8,8 +8,24 @@ function App() {
 
   const addValue = () =>{
     let newCntr = counter+1;
-    if(newCntr>20)newCntr = 0;
-    setCounter(newCntr);
+    // ✅ Summary: How useState updates the UI
+    // useState holds a value (counter).
+
+    // Calling setCounter(newValue):
+
+    // updates internal state
+
+    // causes the component to re-render
+
+    // On re-render, JSX using counter reflects the new value.
+
+    // Multiple identical setCounter calls are batched — only one render happens if the value doesn't change.
+    // Soln
+    setCounter(counter=>counter+1);
+    setCounter(counter=>counter+1);
+    setCounter(counter=>counter+1);
+    setCounter(counter=>counter+1);
+    setCounter(counter=>counter+1);
     console.log("clicked",newCntr);
   }
 
